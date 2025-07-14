@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safwan - Software Engineer Portfolio</title>
+    <meta name="description" content="Safwan's professional portfolio showcasing expertise in software engineering, EdTech innovation, and academic excellence. Explore projects, skills, and career journey." />
+    <meta name="keywords" content="software engineer, portfolio, EdTech, developer, lecturer, programming, web development" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Safwan - Software Engineer Portfolio" />
+    <meta property="og:description" content="Professional portfolio showcasing software engineering expertise and EdTech innovation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://safwan-portfolio.com" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Safwan - Software Engineer Portfolio" />
+    <meta name="twitter:description" content="Professional portfolio showcasing software engineering expertise and EdTech innovation" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=100&auto=format&fit=crop" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsafwanpor6933back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-gray-200 transition-all duration-300">
+        <div class="container-max section-padding py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">S</span>
+                    </div>
+                    <span class="font-bold text-xl text-primary">Safwan</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="nav-link text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="about_personal_story_teaching_background.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">About</a>
+                    <a href="skills_matrix_interactive_technical_assessment.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Skills</a>
+                    <a href="education_certifications_hub.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Education</a>
+                    <a href="career_vision_goals.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Career</a>
+                    <a href="contact_social_integration.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Contact</a>
+                </div>
+                
+                <!-- CV Download Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="javascript:void(0)" onclick="downloadCV()" class="btn-accent hidden sm:inline-flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-smooth">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#hero" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="about_personal_story_teaching_background.html" class="text-text-secondary hover:text-primary transition-smooth">About</a>
+                    <a href="skills_matrix_interactive_technical_assessment.html" class="text-text-secondary hover:text-primary transition-smooth">Skills</a>
+                    <a href="education_certifications_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Education</a>
+                    <a href="career_vision_goals.html" class="text-text-secondary hover:text-primary transition-smooth">Career</a>
+                    <a href="contact_social_integration.html" class="text-text-secondary hover:text-primary transition-smooth">Contact</a>
+                    <a href="javascript:void(0)" onclick="downloadCV()" class="btn-accent inline-flex items-center justify-center space-x-2 w-full">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
+        <!-- Floating Geometric Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-pulse-slow"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-secondary/10 rotate-45 animate-pulse-slow animation-delay-200"></div>
+            <div class="absolute bottom-40 left-20 w-24 h-24 bg-accent/10 rounded-lg rotate-12 animate-pulse-slow animation-delay-400"></div>
+            <div class="absolute bottom-20 right-10 w-18 h-18 bg-primary/10 rounded-full animate-pulse-slow animation-delay-600"></div>
+        </div>
+        
+        <div class="container-max section-padding relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left">
+                    <div class="mb-6">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
+                            Hi There, I'm <span class="text-gradient">Safwan Saleem</span>
+                        </h1>
+                        <div class="text-xl md:text-2xl text-text-secondary mb-2">
+                            <span id="typing-text" class="animate-typing border-r-2 border-secondary"></span>
+                        </div>
+                        <p class="text-lg text-text-secondary max-w-2xl mx-auto lg:mx-0" style="text-align: justify;">
+                            Aspiring Software Engineer with a strong academic foundation and real-world experience in IT systems, web development, and teaching. Passionate about building practical, user-focused digital solutions and currently seeking full-time opportunities to grow as a developer.
+
+
+
+
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="javascript:void(0)" onclick="downloadCV()" class="btn-accent inline-flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            <span>Download CV</span>
+                        </a>
+                        <a href="#skills" class="btn-secondary inline-flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                            </svg>
+                            <span>Explore My Work</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Professional Headshot -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="w-80 h-80 rounded-full overflow-hidden shadow-soft-xl">
+                            <img src="images/Safwan.jpg" alt="Safwan - Software Engineer" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
+                        </div>
+                        <!-- Decorative Ring -->
+                        <div class="absolute -inset-4 border-4 border-secondary/20 rounded-full animate-pulse-slow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Technical Expertise</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    A comprehensive overview of my technical skills, from programming languages to frameworks and tools. Hover over each skill to see proficiency levels and real-world applications.
+                </p>
+            </div>
+            
+            <!-- Skill Categories Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="skill-filter active px-6 py-2 rounded-full bg-primary text-white transition-smooth" data-category="all">
+                    All Skills
+                </button>
+                <button class="skill-filter px-6 py-2 rounded-full bg-gray-200 text-text-secondary hover:bg-primary hover:text-white transition-smooth" data-category="languages">
+                    Languages
+                </button>
+                <button class="skill-filter px-6 py-2 rounded-full bg-gray-200 text-text-secondary hover:bg-primary hover:text-white transition-smooth" data-category="frameworks">
+                    Frameworks
+                </button>
+                <button class="skill-filter px-6 py-2 rounded-full bg-gray-200 text-text-secondary hover:bg-primary hover:text-white transition-smooth" data-category="tools">
+                    Tools & Platforms
+                </button>
+            </div>
+            
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Programming Languages -->
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="languages">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">JavaScript</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[90%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Advanced</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="languages">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">Python</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[85%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Advanced</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="languages">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">Java</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[80%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Proficient</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="languages">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">TypeScript</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[75%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Proficient</span>
+                </div>
+                
+                <!-- Frameworks -->
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="frameworks">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">React</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[85%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Advanced</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="frameworks">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">Node.js</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[80%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Proficient</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="frameworks">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">Django</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[75%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Proficient</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="frameworks">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">Bootstrap</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[90%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Advanced</span>
+                </div>
+                
+                <!-- Tools & Platforms -->
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="tools">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">Git</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[85%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Advanced</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="tools">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">Docker</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[70%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Intermediate</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="tools">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">AWS</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[65%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Intermediate</span>
+                </div>
+                
+                <div class="skill-card card p-6 text-center group cursor-pointer" data-category="tools">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-10 h-10 filter invert" />
+                    </div>
+                    <h3 class="font-semibold text-primary mb-2">GitHub</h3>
+                    <div class="skill-progress bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-secondary h-2 rounded-full transition-all duration-1000 group-hover:w-[90%] w-0"></div>
+                    </div>
+                    <span class="text-sm text-text-secondary">Advanced</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding bg-background">
+        <div class="container-max">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Professional Experience</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    My journey from academia to industry, showcasing diverse experience in education technology and software development.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Current Role -->
+                <div class="experience-card card-elevated p-8 group hover:scale-105 transition-all duration-300">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-primary mb-1">Software Developer</h3>
+                            <p class="text-secondary font-semibold mb-2">EdTech Solutions Ltd</p>
+                            <p class="text-sm text-text-secondary">2024 - Present • Remote, UK</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <p class="text-text-secondary">
+                            Developing innovative educational technology solutions that enhance learning experiences for students and educators worldwide.
+                        </p>
+                        <ul class="space-y-2 text-sm text-text-secondary">
+                            <li class="flex items-start space-x-2">
+                                <svg class="w-4 h-4 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Built responsive web applications using React and Node.js</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <svg class="w-4 h-4 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Implemented automated testing and CI/CD pipelines</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <svg class="w-4 h-4 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Collaborated with cross-functional teams in agile environment</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-primary-100 text-primary text-xs rounded-full">React</span>
+                        <span class="px-3 py-1 bg-primary-100 text-primary text-xs rounded-full">Node.js</span>
+                        <span class="px-3 py-1 bg-primary-100 text-primary text-xs rounded-full">TypeScript</span>
+                        <span class="px-3 py-1 bg-primary-100 text-primary text-xs rounded-full">AWS</span>
+                    </div>
+                </div>
+                
+                <!-- Teaching Role -->
+                <div class="experience-card card-elevated p-8 group hover:scale-105 transition-all duration-300">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-primary mb-1">Computer Science Lecturer</h3>
+                            <p class="text-accent font-semibold mb-2">University of Technology</p>
+                            <p class="text-sm text-text-secondary">2022 - 2024 • Manchester, UK</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <p class="text-text-secondary">
+                            Delivered comprehensive computer science education while developing practical programming skills and fostering innovation in students.
+                        </p>
+                        <ul class="space-y-2 text-sm text-text-secondary">
+                            <li class="flex items-start space-x-2">
+                                <svg class="w-4 h-4 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Taught programming fundamentals to 200+ students</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <svg class="w-4 h-4 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Developed curriculum for web development courses</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <svg class="w-4 h-4 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Mentored student projects and research initiatives</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-accent-100 text-accent text-xs rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-accent-100 text-accent text-xs rounded-full">Java</span>
+                        <span class="px-3 py-1 bg-accent-100 text-accent text-xs rounded-full">Web Development</span>
+                        <span class="px-3 py-1 bg-accent-100 text-accent text-xs rounded-full">Curriculum Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Education Journey</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    My academic foundation built through rigorous study at prestigious UK institutions, establishing the theoretical knowledge that drives my practical applications.
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-secondary"></div>
+                
+                <div class="space-y-12">
+                    <!-- Master's Degree -->
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="card p-6">
+                                <div class="flex items-center justify-end space-x-4 mb-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-primary">Master of Science</h3>
+                                        <p class="text-secondary font-semibold">Computer Science</p>
+                                        <p class="text-sm text-text-secondary">University of Manchester</p>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=100&auto=format&fit=crop" alt="University of Manchester" class="w-16 h-16 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=100'; this.onerror=null;" />
+                                </div>
+                                <p class="text-text-secondary text-sm mb-3">
+                                    Advanced studies in software engineering, machine learning, and distributed systems. Thesis on EdTech innovation.
+                                </p>
+                                <div class="flex justify-end space-x-2">
+                                    <span class="px-3 py-1 bg-success-100 text-success text-xs rounded-full">Distinction</span>
+                                    <span class="px-3 py-1 bg-primary-100 text-primary text-xs rounded-full">2023-2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Node -->
+                        <div class="w-6 h-6 bg-primary rounded-full border-4 border-surface shadow-lg z-10"></div>
+                        
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- Bachelor's Degree -->
+                    <div class="flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        
+                        <!-- Timeline Node -->
+                        <div class="w-6 h-6 bg-secondary rounded-full border-4 border-surface shadow-lg z-10"></div>
+                        
+                        <div class="w-1/2 pl-8">
+                            <div class="card p-6">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=100&auto=format&fit=crop" alt="University of Leeds" class="w-16 h-16 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/05/09/21/49/graduation-2299696_960_720.jpg'; this.onerror=null;" />
+                                    <div>
+                                        <h3 class="text-xl font-bold text-primary">Bachelor of Science</h3>
+                                        <p class="text-secondary font-semibold">Software Engineering</p>
+                                        <p class="text-sm text-text-secondary">University of Leeds</p>
+                                    </div>
+                                </div>
+                                <p class="text-text-secondary text-sm mb-3">
+                                    Comprehensive foundation in programming, algorithms, database systems, and software architecture principles.
+                                </p>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-success-100 text-success text-xs rounded-full">First Class Honours</span>
+                                    <span class="px-3 py-1 bg-primary-100 text-primary text-xs rounded-full">2020-2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding bg-background">
+        <div class="container-max">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Certifications & Learning</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    Continuous professional development through industry-recognized certifications and specialized training programs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- AWS Certification -->
+                <div class="certification-card card p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=100&auto=format&fit=crop" alt="AWS Certification" class="w-12 h-12 rounded" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=100'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-bold text-primary mb-2">AWS Solutions Architect</h3>
+                    <p class="text-sm text-text-secondary mb-4">Amazon Web Services</p>
+                    <div class="mb-4">
+                        <div class="bg-gray-200 rounded-full h-2 mb-2">
+                            <div class="bg-success h-2 rounded-full w-full"></div>
+                        </div>
+                        <span class="text-sm text-success font-semibold">Completed</span>
+                    </div>
+                    <span class="px-3 py-1 bg-success-100 text-success text-xs rounded-full">2024</span>
+                </div>
+                
+                <!-- React Certification -->
+                <div class="certification-card card p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-12 h-12" />
+                    </div>
+                    <h3 class="font-bold text-primary mb-2">React Developer</h3>
+                    <p class="text-sm text-text-secondary mb-4">Meta (Facebook)</p>
+                    <div class="mb-4">
+                        <div class="bg-gray-200 rounded-full h-2 mb-2">
+                            <div class="bg-success h-2 rounded-full w-full"></div>
+                        </div>
+                        <span class="text-sm text-success font-semibold">Completed</span>
+                    </div>
+                    <span class="px-3 py-1 bg-success-100 text-success text-xs rounded-full">2024</span>
+                </div>
+                
+                <!-- Python Certification -->
+                <div class="certification-card card p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-12 h-12" />
+                    </div>
+                    <h3 class="font-bold text-primary mb-2">Python for Data Science</h3>
+                    <p class="text-sm text-text-secondary mb-4">IBM</p>
+                    <div class="mb-4">
+                        <div class="bg-gray-200 rounded-full h-2 mb-2">
+                            <div class="bg-warning h-2 rounded-full w-3/4"></div>
+                        </div>
+                        <span class="text-sm text-warning font-semibold">In Progress</span>
+                    </div>
+                    <span class="px-3 py-1 bg-warning-100 text-warning text-xs rounded-full">Expected 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CV Download Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="javascript:void(0)" onclick="downloadCV()" class="btn-accent shadow-soft-lg inline-flex items-center space-x-2 animate-pulse-slow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <span class="hidden sm:inline">CV</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white section-padding">
+        <div class="container-max">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">S</span>
+                        </div>
+                        <span class="font-bold text-xl">Safwan</span>
+                    </div>
+                    <p class="text-primary-200 mb-4">
+                        Software Engineer passionate about creating innovative solutions that bridge academia and industry.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/safwan" class="text-primary-200 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/safwan" class="text-primary-200 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:safwan@example.com" class="text-primary-200 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <div class="space-y-2">
+                        <a href="about_personal_story_teaching_background.html" class="block text-primary-200 hover:text-white transition-smooth">About Me</a>
+                        <a href="skills_matrix_interactive_technical_assessment.html" class="block text-primary-200 hover:text-white transition-smooth">Skills</a>
+                        <a href="education_certifications_hub.html" class="block text-primary-200 hover:text-white transition-smooth">Education</a>
+                        <a href="career_vision_goals.html" class="block text-primary-200 hover:text-white transition-smooth">Career Goals</a>
+                        <a href="contact_social_integration.html" class="block text-primary-200 hover:text-white transition-smooth">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Get In Touch</h3>
+                    <div class="space-y-2 text-primary-200">
+                        <p class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span>safwan@example.com</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>Manchester, UK</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Available for remote work</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-primary-700 pt-8 text-center">
+                <p class="text-primary-200">
+                    © 2025 Safwan. All rights reserved. Built with passion for innovation and excellence.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing Animation
+        const typingText = document.getElementById('typing-text');
+        const phrases = ['Software Engineer', 'EdTech Innovator', 'Former Lecturer', 'Problem Solver'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+
+            const typingSpeed = isDeleting ? 50 : 100;
+            setTimeout(typeWriter, typingSpeed);
+        }
+
+        // Start typing animation
+        typeWriter();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Skill Filter Functionality
+        const skillFilters = document.querySelectorAll('.skill-filter');
+        const skillCards = document.querySelectorAll('.skill-card');
+
+        skillFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Update active filter
+                skillFilters.forEach(f => {
+                    f.classList.remove('active', 'bg-primary', 'text-white');
+                    f.classList.add('bg-gray-200', 'text-text-secondary');
+                });
+                filter.classList.add('active', 'bg-primary', 'text-white');
+                filter.classList.remove('bg-gray-200', 'text-text-secondary');
+
+                // Filter skills
+                const category = filter.dataset.category;
+                skillCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-surface/95', 'backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('bg-surface/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // CV Download Function
+        function downloadCV() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = 'images/Safwan_cv.pdf'; // Replace with actual CV URL
+            link.download = 'Safwan_Software_Engineer_CV.pdf';
+            link.target = '_blank';
+            
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Analytics tracking (if needed)
+            console.log('CV download initiated');
+        }
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card, .experience-card, .certification-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1a365d; /* Deep navy for trust and technical authority */
+  --color-primary-50: #e6f3ff;
+  --color-primary-100: #b3d9ff;
+  --color-primary-200: #80bfff;
+  --color-primary-300: #4da6ff;
+  --color-primary-400: #1a8cff;
+  --color-primary-500: #1a365d; /* Primary */
+  --color-primary-600: #153056;
+  --color-primary-700: #102a4f;
+  --color-primary-800: #0b2448;
+  --color-primary-900: #061e41;
+
+  /* Secondary Colors */
+  --color-secondary: #00d4ff; /* Innovation cyan for interactive elements */
+  --color-secondary-50: #e6fbff;
+  --color-secondary-100: #b3f3ff;
+  --color-secondary-200: #80ebff;
+  --color-secondary-300: #4de3ff;
+  --color-secondary-400: #1adbff;
+  --color-secondary-500: #00d4ff; /* Secondary */
+  --color-secondary-600: #00bfe6;
+  --color-secondary-700: #00aacc;
+  --color-secondary-800: #0095b3;
+  --color-secondary-900: #008099;
+
+  /* Accent Colors */
+  --color-accent: #ff6b35; /* Warm orange for achievements and CTAs */
+  --color-accent-50: #fff4f0;
+  --color-accent-100: #ffe0d1;
+  --color-accent-200: #ffccb3;
+  --color-accent-300: #ffb894;
+  --color-accent-400: #ffa476;
+  --color-accent-500: #ff6b35; /* Accent */
+  --color-accent-600: #e6602f;
+  --color-accent-700: #cc5529;
+  --color-accent-800: #b34a23;
+  --color-accent-900: #993f1d;
+
+  /* Background Colors */
+  --color-background: #f7fafc; /* Clean canvas for optimal readability */
+  --color-surface: #ffffff; /* Pure white for cards and containers */
+
+  /* Text Colors */
+  --color-text-primary: #2d3748; /* Strong contrast for extended reading */
+  --color-text-secondary: #718096; /* Clear hierarchy without harsh contrast */
+
+  /* Status Colors */
+  --color-success: #10b981; /* Emerald for completed certifications */
+  --color-warning: #f6ad55; /* Gentle amber for in-progress items */
+  --color-error: #e53e3e; /* Clear red for form validation */
+
+  /* Neutral Colors */
+  --color-gray-50: #f7fafc;
+  --color-gray-100: #edf2f7;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e0;
+  --color-gray-400: #a0aec0;
+  --color-gray-500: #718096;
+  --color-gray-600: #4a5568;
+  --color-gray-700: #2d3748;
+  --color-gray-800: #1a202c;
+  --color-gray-900: #171923;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-secondary-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out hover:bg-accent-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-surface rounded-lg shadow-sm border border-gray-200 transition-all duration-300 ease-in-out hover:shadow-md;
+  }
+
+  .card-elevated {
+    @apply bg-surface rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-12 lg:py-16;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-soft-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .transition-smooth {
+    transition: all 300ms ease-in-out;
+  }
+
+  .transition-reveal {
+    transition: all 600ms ease-in-out;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: transparent;
+  }
+  51%, 100% {
+    border-color: var(--color-secondary);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.animate-typing {
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  border-right: 2px solid var(--color-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Responsive Design Enhancements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
