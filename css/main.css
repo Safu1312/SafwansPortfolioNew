@@ -933,7 +933,7 @@ code, pre {
 .section-padding{
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 3rem;
+  padding-top: 5rem;
   padding-bottom: 3rem;
 }
 
@@ -2772,3 +2772,48 @@ code, pre {
     line-height: 1;
   }
 }
+
+@media (max-width: 767px) {
+  /* Stack timeline items vertically */
+  #education .space-y-12 > div.flex.items-center {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    position: relative;
+  }
+
+  /* Left and right halves full width */
+  #education .w-1\/2 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Timeline Node: Center horizontally and position absolute to align on timeline line */
+  #education .w-6.h-6 {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    top: 0.75rem; /* adjust vertical positioning */
+    z-index: 10;
+  }
+
+  /* Add padding-top to timeline items to make space for the absolute node */
+  #education .space-y-12 > div.flex.items-center > .w-1\/2 {
+    padding-top: 1.5rem;
+  }
+
+  /* Remove right text align on left blocks */
+  #education .pr-8.text-right {
+    text-align: left !important;
+    padding-right: 0 !important;
+  }
+
+  /* Add vertical spacing below cards */
+  #education .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
