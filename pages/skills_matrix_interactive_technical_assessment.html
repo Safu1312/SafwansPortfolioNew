@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Matrix - Interactive Technical Assessment | Safwan</title>
+    <meta name="description" content="Comprehensive interactive skills matrix showcasing Safwan's technical competencies with visual proficiency indicators and real-world application context." />
+    <meta name="keywords" content="skills matrix, technical assessment, programming languages, frameworks, tools, software engineer, proficiency levels" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Skills Matrix - Interactive Technical Assessment | Safwan" />
+    <meta property="og:description" content="Comprehensive interactive skills matrix showcasing technical competencies and real-world applications" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://safwan-portfolio.com/skills-matrix" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Skills Matrix - Interactive Technical Assessment | Safwan" />
+    <meta name="twitter:description" content="Comprehensive interactive skills matrix showcasing technical competencies" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" />
+    
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=100&auto=format&fit=crop" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fsafwanpor6933back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+
+<style>
+    .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.skill-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease-in-out;
+}
+.skill-card:hover .skill-icon {
+    transform: rotate(8deg) scale(1.1);
+}
+
+.skill-tags {
+    margin-top: 0.75rem;
+}
+.skill-tag {
+    display: inline-block;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.3rem;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 4px #6366f1; }
+    to { box-shadow: 0 0 12px #4f46e5; }
+}
+
+.skill-tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    color: #333;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    width: 100%;
+    margin-top: 0.75rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.skill-card:hover .skill-tooltip {
+    display: block;
+}
+
+.proficiency-bar {
+    background-color: #e5e7eb;
+    height: 8px;
+    border-radius: 9999px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+.proficiency-fill {
+    height: 100%;
+    background: linear-gradient(to right, #34d399, #10b981);
+    transition: width 1s ease-in-out;
+}
+.skill-filter.active {
+    background-color: #10b981;
+    color: white;
+    transform: scale(1.05);
+}
+.skill-filter {
+    transition: all 0.2s;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    background-color: #f3f4f6;
+    font-weight: 500;
+    cursor: pointer;
+}
+.skill-filter:hover {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+</style>
+
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-gray-200 transition-all duration-300">
+        <div class="container-max section-padding py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">S</span>
+                    </div>
+                    <span class="font-bold text-xl text-primary">Safwan</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_software_engineer_portfolio.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="about_personal_story_teaching_background.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">About</a>
+                    <a href="skills_matrix_interactive_technical_assessment.html" class="nav-link text-primary font-semibold">Skills</a>
+                    <a href="education_certifications_hub.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Education</a>
+                    <a href="career_vision_goals.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Career</a>
+                    <a href="contact_social_integration.html" class="nav-link text-text-secondary hover:text-primary transition-smooth">Contact</a>
+                </div>
+                
+                <!-- CV Download Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="javascript:void(0)" onclick="downloadCV()" class="btn-accent hidden sm:inline-flex items-center space-x-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-smooth">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="homepage_software_engineer_portfolio.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="about_personal_story_teaching_background.html" class="text-text-secondary hover:text-primary transition-smooth">About</a>
+                    <a href="skills_matrix_interactive_technical_assessment.html" class="text-primary font-semibold">Skills</a>
+                    <a href="education_certifications_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Education</a>
+                    <a href="career_vision_goals.html" class="text-text-secondary hover:text-primary transition-smooth">Career</a>
+                    <a href="contact_social_integration.html" class="text-text-secondary hover:text-primary transition-smooth">Contact</a>
+                    <a href="javascript:void(0)" onclick="downloadCV()" class="btn-accent inline-flex items-center justify-center space-x-2 w-full">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50 pt-24">
+        <!-- Floating Geometric Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-pulse-slow"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-secondary/10 rotate-45 animate-pulse-slow animation-delay-200"></div>
+            <div class="absolute bottom-40 left-20 w-24 h-24 bg-accent/10 rounded-lg rotate-12 animate-pulse-slow animation-delay-400"></div>
+            <div class="absolute bottom-20 right-10 w-18 h-18 bg-primary/10 rounded-full animate-pulse-slow animation-delay-600"></div>
+        </div>
+        
+        <div class="container-max section-padding relative z-10">
+            <div class="text-center">
+                <div class="mb-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
+                        Skills <span class="text-gradient">Matrix</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-text-secondary mb-6">
+                        Interactive Technical Assessment
+                    </p>
+                    <p class="text-lg text-text-secondary max-w-4xl mx-auto">
+                        An engaging, filterable grid displaying my technical competencies with visual proficiency indicators and real-world application context. Explore my skills through interactive categories and discover how I've applied each technology in projects and teaching.
+                    </p>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">12+</div>
+                        <div class="text-text-secondary">Programming Languages</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">15+</div>
+                        <div class="text-text-secondary">Frameworks & Libraries</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">20+</div>
+                        <div class="text-text-secondary">Tools & Platforms</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">8+</div>
+                        <div class="text-text-secondary">Soft Skills</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills-matrix" class="section-padding bg-surface">
+        <div class="container-max">
+            <!-- Filter Controls -->
+            <div class="mb-12">
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="skill-filter active" data-category="all">
+                        <span class="filter-icon">🚀</span>
+                        All Skills
+                    </button>
+                    <button class="skill-filter" data-category="programming">
+                        <span class="filter-icon">💻</span>
+                        Programming Languages
+                    </button>
+                    <button class="skill-filter" data-category="frameworks">
+                        <span class="filter-icon">⚡</span>
+                        Frameworks & Libraries
+                    </button>
+                    <button class="skill-filter" data-category="tools">
+                        <span class="filter-icon">🛠️</span>
+                        Tools & Platforms
+                    </button>
+                    <button class="skill-filter" data-category="soft">
+                        <span class="filter-icon">🎯</span>
+                        Soft Skills
+                    </button>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="max-w-md mx-auto relative">
+                    <input type="text" id="skill-search" placeholder="Search skills..." class="w-full px-4 py-3 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                    <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Skills Grid -->
+            <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Programming Languages -->
+                <div class="skill-card" data-category="programming" data-name="JavaScript" data-proficiency="90">
+                    <div class="skill-icon bg-gradient-to-br from-yellow-400 to-yellow-500">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iI0Y3REYxRSIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkpTPC90ZXh0Pgo8L3N2Zz4K'; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">JavaScript</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="proficiency-label">Expert</span>
+                        <p class="skill-description">ES6+, Async/Await, DOM Manipulation, Modern frameworks</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Frontend</span>
+                            <span class="skill-tag">Backend</span>
+                            <span class="skill-tag">Teaching</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>JavaScript Expertise</h4>
+                        <p><strong>Projects:</strong> EdTech platform, Portfolio websites, Interactive dashboards</p>
+                        <p><strong>Teaching:</strong> Taught 200+ students JavaScript fundamentals</p>
+                        <p><strong>Timeline:</strong> 5+ years experience</p>
+                        <p><strong>Next Goal:</strong> Advanced TypeScript patterns</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="programming" data-name="Python" data-proficiency="85">
+                    <div class="skill-icon bg-gradient-to-br from-blue-500 to-blue-600">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzMwNzZCNiIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QWTwvdGV4dD4KPC9zdmc+Cg=='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Python</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="proficiency-label">Advanced</span>
+                        <p class="skill-description">Django, Flask, Data Science, Automation scripts</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Backend</span>
+                            <span class="skill-tag">Data Science</span>
+                            <span class="skill-tag">Automation</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Python Mastery</h4>
+                        <p><strong>Projects:</strong> Data analysis tools, Web APIs, Academic research</p>
+                        <p><strong>Teaching:</strong> Computer Science curriculum development</p>
+                        <p><strong>Timeline:</strong> 4+ years experience</p>
+                        <p><strong>Next Goal:</strong> Machine Learning specialization</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="programming" data-name="TypeScript" data-proficiency="80">
+                    <div class="skill-icon bg-gradient-to-br from-blue-400 to-blue-500">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzMxNzhDNiIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UUzwvdGV4dD4KPC9zdmc+Cg=='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">TypeScript</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="proficiency-label">Advanced</span>
+                        <p class="skill-description">Type safety, Interfaces, Generics, Enterprise applications</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Frontend</span>
+                            <span class="skill-tag">Backend</span>
+                            <span class="skill-tag">Type Safety</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>TypeScript Expertise</h4>
+                        <p><strong>Projects:</strong> Large-scale applications, Component libraries</p>
+                        <p><strong>Teaching:</strong> Advanced JavaScript patterns</p>
+                        <p><strong>Timeline:</strong> 3+ years experience</p>
+                        <p><strong>Next Goal:</strong> Advanced utility types</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="programming" data-name="Java" data-proficiency="75">
+                    <div class="skill-icon bg-gradient-to-br from-red-500 to-red-600">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iI0VENkExOSIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkpBPC90ZXh0Pgo8L3N2Zz4K'; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Java</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="proficiency-label">Proficient</span>
+                        <p class="skill-description">OOP, Spring Boot, Data structures, Algorithms</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Backend</span>
+                            <span class="skill-tag">Enterprise</span>
+                            <span class="skill-tag">Teaching</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Java Development</h4>
+                        <p><strong>Projects:</strong> University management system, API development</p>
+                        <p><strong>Teaching:</strong> Object-oriented programming fundamentals</p>
+                        <p><strong>Timeline:</strong> 3+ years experience</p>
+                        <p><strong>Next Goal:</strong> Spring Boot microservices</p>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Libraries -->
+                <div class="skill-card" data-category="frameworks" data-name="React" data-proficiency="88">
+                    <div class="skill-icon bg-gradient-to-br from-cyan-500 to-cyan-600">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzYxREFGQiIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlJFQTwvdGV4dD4KPC9zdmc+Cg=='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">React</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 88%"></div>
+                        </div>
+                        <span class="proficiency-label">Advanced</span>
+                        <p class="skill-description">Hooks, Context API, Redux, Performance optimization</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Frontend</span>
+                            <span class="skill-tag">SPA</span>
+                            <span class="skill-tag">Professional</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>React Development</h4>
+                        <p><strong>Projects:</strong> EdTech dashboard, Student portal, Admin panels</p>
+                        <p><strong>Teaching:</strong> Modern React patterns and best practices</p>
+                        <p><strong>Timeline:</strong> 4+ years experience</p>
+                        <p><strong>Next Goal:</strong> React 18 features and concurrent rendering</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="frameworks" data-name="Node.js" data-proficiency="82">
+                    <div class="skill-icon bg-gradient-to-br from-green-500 to-green-600">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzMzOTkzMyIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OT0Q8L3RleHQ+Cjwvc3ZnPgo='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Node.js</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 82%"></div>
+                        </div>
+                        <span class="proficiency-label">Advanced</span>
+                        <p class="skill-description">Express.js, RESTful APIs, Real-time applications</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Backend</span>
+                            <span class="skill-tag">API</span>
+                            <span class="skill-tag">Real-time</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Node.js Backend</h4>
+                        <p><strong>Projects:</strong> API services, Real-time chat, Data processing</p>
+                        <p><strong>Teaching:</strong> Server-side JavaScript development</p>
+                        <p><strong>Timeline:</strong> 3+ years experience</p>
+                        <p><strong>Next Goal:</strong> Performance optimization and scaling</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="frameworks" data-name="Django" data-proficiency="78">
+                    <div class="skill-icon bg-gradient-to-br from-green-600 to-green-700">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzA5MkUyMCIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5ESmo8L3RleHQ+Cjwvc3ZnPgo='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Django</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 78%"></div>
+                        </div>
+                        <span class="proficiency-label">Proficient</span>
+                        <p class="skill-description">MVC, ORM, Authentication, Admin interface</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Backend</span>
+                            <span class="skill-tag">Web Framework</span>
+                            <span class="skill-tag">Academic</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Django Web Framework</h4>
+                        <p><strong>Projects:</strong> Student management system, Research portal</p>
+                        <p><strong>Teaching:</strong> Web development with Python</p>
+                        <p><strong>Timeline:</strong> 2+ years experience</p>
+                        <p><strong>Next Goal:</strong> Django REST framework mastery</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="frameworks" data-name="Tailwind CSS" data-proficiency="92">
+                    <div class="skill-icon bg-gradient-to-br from-teal-500 to-blue-600">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzA2QjZENSIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UV0M8L3RleHQ+Cjwvc3ZnPgo='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Tailwind CSS</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 92%"></div>
+                        </div>
+                        <span class="proficiency-label">Expert</span>
+                        <p class="skill-description">Utility-first, Responsive design, Custom components</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Frontend</span>
+                            <span class="skill-tag">Styling</span>
+                            <span class="skill-tag">Design System</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Tailwind CSS Mastery</h4>
+                        <p><strong>Projects:</strong> Portfolio sites, Admin dashboards, Landing pages</p>
+                        <p><strong>Teaching:</strong> Modern CSS frameworks and utility-first approach</p>
+                        <p><strong>Timeline:</strong> 3+ years experience</p>
+                        <p><strong>Next Goal:</strong> Advanced component patterns</p>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-card" data-category="tools" data-name="Git" data-proficiency="90">
+                    <div class="skill-icon bg-gradient-to-br from-orange-500 to-red-500">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iI0Y1MzMzMyIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HSVQ8L3RleHQ+Cjwvc3ZnPgo='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Git</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="proficiency-label">Expert</span>
+                        <p class="skill-description">Version control, Branching, Collaboration, CI/CD</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Version Control</span>
+                            <span class="skill-tag">DevOps</span>
+                            <span class="skill-tag">Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Git Version Control</h4>
+                        <p><strong>Projects:</strong> All development projects, Team collaboration</p>
+                        <p><strong>Teaching:</strong> Version control best practices</p>
+                        <p><strong>Timeline:</strong> 5+ years experience</p>
+                        <p><strong>Next Goal:</strong> Advanced Git workflows</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="tools" data-name="Docker" data-proficiency="70">
+                    <div class="skill-icon bg-gradient-to-br from-blue-500 to-blue-600">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzAwODVEMSIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5ET0NLPC90ZXh0Pgo8L3N2Zz4K'; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Docker</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 70%"></div>
+                        </div>
+                        <span class="proficiency-label">Intermediate</span>
+                        <p class="skill-description">Containerization, Docker Compose, Deployment</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">DevOps</span>
+                            <span class="skill-tag">Deployment</span>
+                            <span class="skill-tag">Containers</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Docker Containerization</h4>
+                        <p><strong>Projects:</strong> Application deployment, Development environments</p>
+                        <p><strong>Teaching:</strong> Modern deployment practices</p>
+                        <p><strong>Timeline:</strong> 2+ years experience</p>
+                        <p><strong>Next Goal:</strong> Kubernetes orchestration</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="tools" data-name="AWS" data-proficiency="68">
+                    <div class="skill-icon bg-gradient-to-br from-orange-400 to-orange-500">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iI0ZGOTkwMCIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMzMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFXUzwvdGV4dD4KPC9zdmc+Cg=='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">AWS</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 68%"></div>
+                        </div>
+                        <span class="proficiency-label">Intermediate</span>
+                        <p class="skill-description">EC2, S3, Lambda, RDS, CloudFormation</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Cloud</span>
+                            <span class="skill-tag">Infrastructure</span>
+                            <span class="skill-tag">Serverless</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>AWS Cloud Services</h4>
+                        <p><strong>Projects:</strong> Web application hosting, Data storage solutions</p>
+                        <p><strong>Teaching:</strong> Cloud computing fundamentals</p>
+                        <p><strong>Timeline:</strong> 2+ years experience</p>
+                        <p><strong>Next Goal:</strong> Solutions Architect certification</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="tools" data-name="VS Code" data-proficiency="95">
+                    <div class="skill-icon bg-gradient-to-br from-blue-600 to-blue-700">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzAwN0FDQyIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5WU0M8L3RleHQ+Cjwvc3ZnPgo='; this.onerror=null;" />
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">VS Code</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 95%"></div>
+                        </div>
+                        <span class="proficiency-label">Expert</span>
+                        <p class="skill-description">Extensions, Debugging, Workflow optimization</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">IDE</span>
+                            <span class="skill-tag">Productivity</span>
+                            <span class="skill-tag">Debugging</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>VS Code Mastery</h4>
+                        <p><strong>Projects:</strong> Primary development environment for all projects</p>
+                        <p><strong>Teaching:</strong> Efficient coding practices and shortcuts</p>
+                        <p><strong>Timeline:</strong> 6+ years experience</p>
+                        <p><strong>Next Goal:</strong> Custom extension development</p>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-card" data-category="soft" data-name="Teaching" data-proficiency="95">
+                    <div class="skill-icon bg-gradient-to-br from-purple-500 to-purple-600">
+                        <span class="text-2xl">👨‍🏫</span>
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Teaching & Mentoring</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 95%"></div>
+                        </div>
+                        <span class="proficiency-label">Expert</span>
+                        <p class="skill-description">Curriculum design, Student engagement, Knowledge transfer</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Education</span>
+                            <span class="skill-tag">Leadership</span>
+                            <span class="skill-tag">Communication</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Teaching Excellence</h4>
+                        <p><strong>Experience:</strong> 200+ students taught, 95% satisfaction rate</p>
+                        <p><strong>Courses:</strong> Programming, Web Development, Computer Science</p>
+                        <p><strong>Timeline:</strong> 2+ years as lecturer</p>
+                        <p><strong>Impact:</strong> Improved student coding proficiency by 40%</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="soft" data-name="Problem Solving" data-proficiency="90">
+                    <div class="skill-icon bg-gradient-to-br from-green-500 to-green-600">
+                        <span class="text-2xl">🧩</span>
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Problem Solving</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="proficiency-label">Expert</span>
+                        <p class="skill-description">Analytical thinking, Debug complex issues, Creative solutions</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Analysis</span>
+                            <span class="skill-tag">Debugging</span>
+                            <span class="skill-tag">Innovation</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Problem-Solving Approach</h4>
+                        <p><strong>Method:</strong> Systematic analysis, root cause identification</p>
+                        <p><strong>Tools:</strong> Debugging tools, Performance analysis</p>
+                        <p><strong>Success Rate:</strong> 98% issue resolution within deadline</p>
+                        <p><strong>Specialty:</strong> Complex algorithm optimization</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="soft" data-name="Communication" data-proficiency="88">
+                    <div class="skill-icon bg-gradient-to-br from-blue-500 to-blue-600">
+                        <span class="text-2xl">💬</span>
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Communication</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 88%"></div>
+                        </div>
+                        <span class="proficiency-label">Advanced</span>
+                        <p class="skill-description">Technical documentation, Presentations, Cross-team collaboration</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Documentation</span>
+                            <span class="skill-tag">Presentation</span>
+                            <span class="skill-tag">Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Communication Skills</h4>
+                        <p><strong>Strengths:</strong> Technical writing, Public speaking</p>
+                        <p><strong>Languages:</strong> English (Native), Arabic (Fluent)</p>
+                        <p><strong>Experience:</strong> Conference presentations, Team leadership</p>
+                        <p><strong>Tools:</strong> Documentation platforms, Presentation software</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="soft" data-name="Team Leadership" data-proficiency="85">
+                    <div class="skill-icon bg-gradient-to-br from-red-500 to-red-600">
+                        <span class="text-2xl">👥</span>
+                    </div>
+                    <div class="skill-content">
+                        <h3 class="skill-name">Team Leadership</h3>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="proficiency-label">Advanced</span>
+                        <p class="skill-description">Project management, Team coordination, Agile methodologies</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Management</span>
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Coordination</span>
+                        </div>
+                    </div>
+                    <div class="skill-tooltip">
+                        <h4>Leadership Experience</h4>
+                        <p><strong>Teams Led:</strong> 5-10 person development teams</p>
+                        <p><strong>Methodology:</strong> Agile/Scrum, Kanban</p>
+                        <p><strong>Success:</strong> 100% on-time project delivery</p>
+                        <p><strong>Focus:</strong> Mentoring junior developers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="no-results" class="text-center py-12 hidden">
+                <div class="text-6xl mb-4">🔍</div>
+                <h3 class="text-2xl font-bold text-text-secondary mb-2">No skills found</h3>
+                <p class="text-text-secondary">Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section id="learning-path" class="section-padding bg-background">
+        <div class="container-max">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Learning Path</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    Skills currently being developed with progress indicators, demonstrating commitment to continuous improvement and staying current with technology trends.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Machine Learning -->
+                <div class="learning-card card-elevated p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🤖</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Machine Learning</h3>
+                            <p class="text-text-secondary">Python, TensorFlow, Data Science</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-text-secondary">Progress</span>
+                            <span class="text-primary font-semibold">65%</span>
+                        </div>
+                        <div class="learning-progress bg-gray-200 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-1000" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-text-secondary mb-4">
+                        Currently learning ML algorithms and neural networks. Working on predictive models for educational data analysis.
+                    </p>
+                    
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Python for Data Science (Complete)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">TensorFlow Basics (In Progress)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Deep Learning (Planned)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <span class="text-xs text-text-secondary">Expected Completion: Q2 2025</span>
+                    </div>
+                </div>
+
+                <!-- Kubernetes -->
+                <div class="learning-card card-elevated p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">☸️</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Kubernetes</h3>
+                            <p class="text-text-secondary">Container Orchestration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-text-secondary">Progress</span>
+                            <span class="text-primary font-semibold">40%</span>
+                        </div>
+                        <div class="learning-progress bg-gray-200 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-text-secondary mb-4">
+                        Advancing from Docker to Kubernetes for scalable container deployment and management in production environments.
+                    </p>
+                    
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Docker Fundamentals (Complete)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">K8s Basics (In Progress)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Production Deployment (Planned)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <span class="text-xs text-text-secondary">Expected Completion: Q3 2025</span>
+                    </div>
+                </div>
+
+                <!-- GraphQL -->
+                <div class="learning-card card-elevated p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🚀</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">GraphQL</h3>
+                            <p class="text-text-secondary">API Query Language</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-text-secondary">Progress</span>
+                            <span class="text-primary font-semibold">25%</span>
+                        </div>
+                        <div class="learning-progress bg-gray-200 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-pink-500 to-pink-600 h-3 rounded-full transition-all duration-1000" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-text-secondary mb-4">
+                        Learning modern API design with GraphQL to build more efficient and flexible data fetching solutions.
+                    </p>
+                    
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">REST API Design (Complete)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">GraphQL Concepts (In Progress)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-text-secondary">Apollo Server (Planned)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <span class="text-xs text-text-secondary">Expected Completion: Q4 2025</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Learning Commitment -->
+            <div class="mt-12 text-center">
+                <div class="bg-gradient-to-r from-primary to-secondary p-8 rounded-lg text-white">
+                    <h3 class="text-2xl font-bold mb-4">Commitment to Continuous Learning</h3>
+                    <p class="text-lg mb-6 opacity-90">
+                        Dedicating 10+ hours weekly to expanding technical skills and staying current with industry trends. 
+                        Learning through hands-on projects, online courses, and community contributions.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-bold mb-2">10+</div>
+                            <div class="opacity-90">Hours/Week Learning</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold mb-2">3</div>
+                            <div class="opacity-90">Active Courses</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold mb-2">100%</div>
+                            <div class="opacity-90">Completion Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-Reference Section -->
+    <section id="cross-reference" class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Skills in Action</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    See how my technical skills have been applied in real-world projects and teaching experiences. Click on any project to explore the technologies used.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- EdTech Platform Project -->
+                <div class="project-card card-elevated p-6 cursor-pointer hover:scale-105 transition-all duration-300" data-skills="react,nodejs,typescript,aws">
+                    <div class="project-header mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">EdTech Learning Platform</h3>
+                        <p class="text-text-secondary">Interactive learning management system with real-time collaboration features</p>
+                    </div>
+                    
+                    <div class="project-skills mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge react">React</span>
+                            <span class="skill-badge nodejs">Node.js</span>
+                            <span class="skill-badge typescript">TypeScript</span>
+                            <span class="skill-badge aws">AWS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-impact">
+                        <h4 class="font-semibold text-primary mb-2">Impact & Achievements:</h4>
+                        <ul class="text-sm text-text-secondary space-y-1">
+                            <li>• 500+ active students using the platform</li>
+                            <li>• 40% improvement in learning outcomes</li>
+                            <li>• 99.9% uptime with scalable architecture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Student Management System -->
+                <div class="project-card card-elevated p-6 cursor-pointer hover:scale-105 transition-all duration-300" data-skills="python,django,javascript,git">
+                    <div class="project-header mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent to-accent-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">University Management System</h3>
+                        <p class="text-text-secondary">Comprehensive system for managing student records, grades, and academic workflows</p>
+                    </div>
+                    
+                    <div class="project-skills mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge python">Python</span>
+                            <span class="skill-badge django">Django</span>
+                            <span class="skill-badge javascript">JavaScript</span>
+                            <span class="skill-badge git">Git</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-impact">
+                        <h4 class="font-semibold text-primary mb-2">Impact & Achievements:</h4>
+                        <ul class="text-sm text-text-secondary space-y-1">
+                            <li>• Streamlined processes for 1000+ students</li>
+                            <li>• 60% reduction in administrative workload</li>
+                            <li>• Secure data management with backup systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Portfolio Website -->
+                <div class="project-card card-elevated p-6 cursor-pointer hover:scale-105 transition-all duration-300" data-skills="javascript,tailwindcss,git,vscode">
+                    <div class="project-header mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">Professional Portfolio</h3>
+                        <p class="text-text-secondary">Interactive portfolio showcasing skills, projects, and professional journey</p>
+                    </div>
+                    
+                    <div class="project-skills mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge javascript">JavaScript</span>
+                            <span class="skill-badge tailwindcss">Tailwind CSS</span>
+                            <span class="skill-badge git">Git</span>
+                            <span class="skill-badge vscode">VS Code</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-impact">
+                        <h4 class="font-semibold text-primary mb-2">Impact & Achievements:</h4>
+                        <ul class="text-sm text-text-secondary space-y-1">
+                            <li>• 100% accessibility compliance</li>
+                            <li>• Mobile-first responsive design</li>
+                            <li>• Optimized performance (95+ Lighthouse score)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CV Download Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="javascript:void(0)" onclick="downloadCV()" class="btn-accent shadow-soft-lg inline-flex items-center space-x-2 animate-pulse-slow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <span class="hidden sm:inline">CV</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+      <footer class="bg-primary text-white section-padding">
+        <div class="container-max">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">S</span>
+                        </div>
+                        <span class="font-bold text-xl">Safwan</span>
+                    </div>
+                    <p class="text-primary-200 mb-4">
+                        Software Engineer passionate about creating innovative solutions that bridge academia and industry.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/safwansaleem/" class="text-primary-200 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Safu1312" class="text-primary-200 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:safwansaleem0@gmail.com" class="text-primary-200 hover:text-white transition-smooth">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">Quick Links</h3>
+                    <div class="space-y-2">
+                        <a href="about_personal_story_teaching_background.html" class="block text-primary-200 hover:text-white transition-smooth">About Me</a>
+                        <a href="skills_matrix_interactive_technical_assessment.html" class="block text-primary-200 hover:text-white transition-smooth">Skills</a>
+                        <a href="education_certifications_hub.html" class="block text-primary-200 hover:text-white transition-smooth">Education</a>
+                        <a href="career_vision_goals.html" class="block text-primary-200 hover:text-white transition-smooth">Career Goals</a>
+                        <a href="contact_social_integration.html" class="block text-primary-200 hover:text-white transition-smooth">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4" style="color: white;">Get In Touch</h3>
+                    <div class="space-y-2 text-primary-200">
+                        <p class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span>safwansaleem0@gmail.com</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>Colombo, Sri Lanka</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Available for remote work</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-primary-700 pt-8 text-center">
+                <p class="text-primary-200">
+                    © 2025 Safwan. All rights reserved. Built with passion for innovation and excellence.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Custom Styles for Skills Matrix */
+        .skill-filter {
+            @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out cursor-pointer;
+            @apply bg-gray-200 text-text-secondary hover:bg-primary hover:text-white;
+            @apply flex items-center space-x-2;
+        }
+
+        .skill-filter.active {
+            @apply bg-primary text-white shadow-lg;
+        }
+
+        .filter-icon {
+            @apply text-lg;
+        }
+
+        .skill-card {
+            @apply bg-surface rounded-xl shadow-lg border border-gray-200 overflow-hidden;
+            @apply transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105;
+            @apply cursor-pointer relative;
+        }
+
+        .skill-icon {
+            @apply w-16 h-16 rounded-lg flex items-center justify-center mb-4 mx-auto;
+        }
+
+        .skill-icon img {
+            @apply w-10 h-10 object-contain;
+        }
+
+        .skill-content {
+            @apply p-6 text-center;
+        }
+
+        .skill-name {
+            @apply text-lg font-bold text-primary mb-3;
+        }
+
+        .proficiency-bar {
+            @apply w-full bg-gray-200 rounded-full h-3 mb-2 overflow-hidden;
+        }
+
+        .proficiency-fill {
+            @apply h-full bg-gradient-to-r from-secondary to-accent rounded-full transition-all duration-1000 ease-out;
+            width: 0%;
+        }
+
+        .skill-card:hover .proficiency-fill {
+            width: var(--proficiency) !important;
+        }
+
+        .proficiency-label {
+            @apply text-sm font-semibold text-text-secondary mb-3;
+        }
+
+        .skill-description {
+            @apply text-sm text-text-secondary mb-4 leading-relaxed;
+        }
+
+        .skill-tags {
+            @apply flex flex-wrap gap-2 justify-center;
+        }
+
+        .skill-tag {
+            @apply px-3 py-1 bg-primary-100 text-primary text-xs rounded-full font-medium;
+        }
+
+        .skill-tooltip {
+            @apply absolute inset-0 bg-primary text-white p-6 rounded-xl opacity-0 invisible;
+            @apply transition-all duration-300 ease-in-out transform scale-95;
+            @apply flex flex-col justify-center z-10;
+        }
+
+        .skill-card:hover .skill-tooltip {
+            @apply opacity-100 visible scale-100;
+        }
+
+        .skill-tooltip h4 {
+            @apply text-lg font-bold mb-3 text-white;
+        }
+
+        .skill-tooltip p {
+            @apply text-sm mb-2 text-primary-200;
+        }
+
+        .learning-card {
+            @apply transition-all duration-300 hover:shadow-xl hover:scale-105;
+        }
+
+        .learning-progress {
+            @apply relative overflow-hidden;
+        }
+
+        .project-card {
+            @apply transition-all duration-300;
+        }
+
+        .project-card:hover {
+            @apply shadow-2xl;
+        }
+
+        .skill-badge {
+            @apply px-3 py-1 text-xs rounded-full font-medium text-white;
+        }
+
+        .skill-badge.react { @apply bg-cyan-500; }
+        .skill-badge.nodejs { @apply bg-green-500; }
+        .skill-badge.typescript { @apply bg-blue-500; }
+        .skill-badge.aws { @apply bg-orange-500; }
+        .skill-badge.python { @apply bg-blue-600; }
+        .skill-badge.django { @apply bg-green-600; }
+        .skill-badge.javascript { @apply bg-yellow-500; }
+        .skill-badge.git { @apply bg-red-500; }
+        .skill-badge.tailwindcss { @apply bg-teal-500; }
+        .skill-badge.vscode { @apply bg-blue-600; }
+
+        /* Mobile Touch Support */
+        @media (max-width: 768px) {
+            .skill-card {
+                @apply transition-all duration-200;
+            }
+            
+            .skill-card:active .skill-tooltip {
+                @apply opacity-100 visible scale-100;
+            }
+            
+            .skills-grid {
+                @apply gap-4;
+            }
+        }
+
+        /* Pulse animation */
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+    </style>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Skills Filter Functionality
+        const skillFilters = document.querySelectorAll('.skill-filter');
+        const skillCards = document.querySelectorAll('.skill-card');
+        const skillSearch = document.getElementById('skill-search');
+        const noResults = document.getElementById('no-results');
+
+        function filterSkills() {
+            const activeCategory = document.querySelector('.skill-filter.active').dataset.category;
+            const searchTerm = skillSearch.value.toLowerCase();
+            let visibleCount = 0;
+
+            skillCards.forEach(card => {
+                const category = card.dataset.category;
+                const name = card.dataset.name.toLowerCase();
+                
+                const categoryMatch = activeCategory === 'all' || category === activeCategory;
+                const searchMatch = name.includes(searchTerm) || 
+                                  card.querySelector('.skill-description').textContent.toLowerCase().includes(searchTerm);
+                
+                if (categoryMatch && searchMatch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        // Filter button event listeners
+        skillFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Update active filter
+                skillFilters.forEach(f => f.classList.remove('active'));
+                filter.classList.add('active');
+                
+                filterSkills();
+            });
+        });
+
+        // Search input event listener
+        skillSearch.addEventListener('input', filterSkills);
+
+        // Initialize proficiency animations
+        function initializeProficiencyBars() {
+            skillCards.forEach(card => {
+                const proficiency = card.dataset.proficiency;
+                const fill = card.querySelector('.proficiency-fill');
+                if (fill && proficiency) {
+                    fill.style.setProperty('--proficiency', proficiency + '%');
+                }
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeProficiencyBars();
+            
+            // Animate proficiency bars on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const fills = entry.target.querySelectorAll('.proficiency-fill');
+                        fills.forEach(fill => {
+                            const proficiency = fill.closest('.skill-card').dataset.proficiency;
+                            if (proficiency) {
+                                setTimeout(() => {
+                                    fill.style.width = proficiency + '%';
+                                }, 200);
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            skillCards.forEach(card => observer.observe(card));
+        });
+
+        // Project skill highlighting
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const projectSkills = card.dataset.skills.split(',');
+                
+                skillCards.forEach(skillCard => {
+                    const skillName = skillCard.dataset.name.toLowerCase().replace(/\s+/g, '').replace('.', '');
+                    if (projectSkills.includes(skillName)) {
+                        skillCard.style.transform = 'scale(1.05)';
+                        skillCard.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                        skillCard.style.borderColor = 'var(--color-secondary)';
+                    }
+                });
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                skillCards.forEach(skillCard => {
+                    skillCard.style.transform = '';
+                    skillCard.style.boxShadow = '';
+                    skillCard.style.borderColor = '';
+                });
+            });
+        });
+
+        // CV Download Function
+        function downloadCV() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = 'https://example.com/safwan-cv.pdf'; // Replace with actual CV URL
+            link.download = 'Safwan_Software_Engineer_CV.pdf';
+            link.target = '_blank';
+            
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Analytics tracking (if needed)
+            console.log('CV download initiated');
+        }
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-surface/95', 'backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('bg-surface/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Touch support for mobile tooltips
+        if ('ontouchstart' in window) {
+            skillCards.forEach(card => {
+                let touchTimeout;
+                
+                card.addEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    
+                    // Hide all other tooltips
+                    skillCards.forEach(otherCard => {
+                        if (otherCard !== card) {
+                            const tooltip = otherCard.querySelector('.skill-tooltip');
+                            tooltip.style.opacity = '0';
+                            tooltip.style.visibility = 'hidden';
+                        }
+                    });
+                    
+                    // Show current tooltip
+                    const tooltip = card.querySelector('.skill-tooltip');
+                    tooltip.style.opacity = '1';
+                    tooltip.style.visibility = 'visible';
+                    
+                    // Auto-hide after 3 seconds
+                    clearTimeout(touchTimeout);
+                    touchTimeout = setTimeout(() => {
+                        tooltip.style.opacity = '0';
+                        tooltip.style.visibility = 'hidden';
+                    }, 3000);
+                });
+            });
+        }
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const filters = document.querySelectorAll('.skill-filter');
+    const cards = document.querySelectorAll('.skill-card');
+    const search = document.getElementById('skill-search');
+
+    filters.forEach(button => {
+        button.addEventListener('click', () => {
+            filters.forEach(b => b.classList.remove('active'));
+            button.classList.add('active');
+            const category = button.dataset.category;
+
+            cards.forEach(card => {
+                const match = card.dataset.category === category || category === 'all';
+                card.style.display = match ? 'block' : 'none';
+            });
+        });
+    });
+
+    search.addEventListener('input', function () {
+        const value = this.value.toLowerCase();
+        cards.forEach(card => {
+            const name = card.dataset.name.toLowerCase();
+            card.style.display = name.includes(value) ? 'block' : 'none';
+        });
+    });
+
+    // Animate proficiency bars on load
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const fill = entry.target.querySelector('.proficiency-fill');
+                const width = fill.style.width;
+                fill.style.width = 0;
+                setTimeout(() => fill.style.width = width, 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    cards.forEach(card => observer.observe(card));
+});
+</script>
+
+</body>
+</html>
